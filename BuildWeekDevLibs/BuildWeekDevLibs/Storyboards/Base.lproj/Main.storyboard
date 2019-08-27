@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Nouns View Controller-->
         <scene sceneID="nmn-PE-k2z">
             <objects>
-                <viewController id="Q14-sQ-fa9" customClass="ViewController" customModule="BuildWeekDevLibs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Q14-sQ-fa9" customClass="NounsViewController" customModule="BuildWeekDevLibs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mo9-Xi-XBO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -175,10 +175,10 @@
             </objects>
             <point key="canvasLocation" x="1427.536231884058" y="137.94642857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Verbs View Controller-->
         <scene sceneID="8Tl-Xc-juD">
             <objects>
-                <viewController id="NJJ-hC-ecB" customClass="ViewController" customModule="BuildWeekDevLibs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NJJ-hC-ecB" customClass="VerbsViewController" customModule="BuildWeekDevLibs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d09-GS-VHJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -260,10 +260,10 @@
             </objects>
             <point key="canvasLocation" x="3154" y="137"/>
         </scene>
-        <!--View Controller-->
+        <!--Adjectives View Controller-->
         <scene sceneID="t5T-uG-KzK">
             <objects>
-                <viewController id="JhH-7B-UFR" customClass="ViewController" customModule="BuildWeekDevLibs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JhH-7B-UFR" customClass="AdjectivesViewController" customModule="BuildWeekDevLibs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aWY-gp-T1N">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
