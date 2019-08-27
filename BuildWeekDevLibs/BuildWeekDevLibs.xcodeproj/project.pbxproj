@@ -76,11 +76,11 @@
 		77DFEAD823144AD3004C1BD7 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				777B376F2315921A0056FEAB /* AdjectivesViewController.swift */,
-				777B37702315921A0056FEAB /* NounsViewController.swift */,
-				777B37712315921A0056FEAB /* StoryViewController.swift */,
-				777B37722315921A0056FEAB /* VerbsViewController.swift */,
 				777B376E2315921A0056FEAB /* ViewController.swift */,
+				777B37702315921A0056FEAB /* NounsViewController.swift */,
+				777B37722315921A0056FEAB /* VerbsViewController.swift */,
+				777B376F2315921A0056FEAB /* AdjectivesViewController.swift */,
+				777B37712315921A0056FEAB /* StoryViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -113,10 +113,10 @@
 		A25993B523143E0500FE8BD2 /* BuildWeekDevLibs */ = {
 			isa = PBXGroup;
 			children = (
-				777B377B2315938F0056FEAB /* Model Controllers */,
-				777B3778231593360056FEAB /* Models */,
 				77DFEAD923144ADE004C1BD7 /* Storyboards */,
 				77DFEAD823144AD3004C1BD7 /* View Controllers */,
+				777B377B2315938F0056FEAB /* Model Controllers */,
+				777B3778231593360056FEAB /* Models */,
 				77DFEAD423144AA0004C1BD7 /* Resources */,
 			);
 			path = BuildWeekDevLibs;

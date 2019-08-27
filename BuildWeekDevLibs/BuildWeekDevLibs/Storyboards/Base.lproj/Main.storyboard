@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,20 +15,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BuildWeekDevLibs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="qtu-MD-6WP">
-                                <rect key="frame" x="20" y="120" width="280" height="260"/>
+                                <rect key="frame" x="20" y="120" width="335" height="447"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Dev Libs!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.44999998807907104" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8w2-r5-IKr">
-                                        <rect key="frame" x="40.5" y="0.0" width="199.5" height="106"/>
+                                        <rect key="frame" x="68" y="0.0" width="199.5" height="293"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
                                         <color key="textColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fill in the blanks to create a funny story about your favorite developer." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.44999998807907104" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="741-SE-pKy">
-                                        <rect key="frame" x="0.0" y="136" width="280" height="60"/>
+                                        <rect key="frame" x="2.5" y="323" width="330" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="cd2-TQ-LKf"/>
                                         </constraints>
@@ -37,7 +37,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJG-Gc-Vze">
-                                        <rect key="frame" x="119" y="226" width="42" height="34"/>
+                                        <rect key="frame" x="146.5" y="413" width="42" height="34"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="T7z-o0-BIf"/>
@@ -77,46 +77,47 @@
             <objects>
                 <viewController id="Q14-sQ-fa9" customClass="NounsViewController" customModule="BuildWeekDevLibs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mo9-Xi-XBO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hgh-Mg-wut">
-                                <rect key="frame" x="20" y="84" width="280" height="376"/>
+                                <rect key="frame" x="20" y="84" width="335" height="563"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Choose your nouns." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.44999998807907104" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GN9-3p-ktt">
-                                        <rect key="frame" x="45" y="0.0" width="190.5" height="86"/>
+                                        <rect key="frame" x="6" y="0.0" width="323.5" height="43"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Noun" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="axi-N1-oKm">
-                                        <rect key="frame" x="10" y="116" width="260" height="26.5"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Noun #1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="axi-N1-oKm">
+                                        <rect key="frame" x="10" y="73" width="315" height="84"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Noun" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQR-jh-4j7">
-                                        <rect key="frame" x="10" y="172.5" width="260" height="26.5"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Noun #2" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQR-jh-4j7">
+                                        <rect key="frame" x="10" y="187" width="315" height="84"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Noun" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c7b-sY-RnW">
-                                        <rect key="frame" x="10" y="229" width="260" height="26.5"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Noun #3" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c7b-sY-RnW">
+                                        <rect key="frame" x="10" y="301" width="315" height="84"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Noun" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2kI-Aq-WOF">
-                                        <rect key="frame" x="10" y="285.5" width="260" height="26.5"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Noun #4" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2kI-Aq-WOF">
+                                        <rect key="frame" x="10" y="415" width="315" height="84"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ul-5j-BW4">
-                                        <rect key="frame" x="61" y="342" width="158" height="34"/>
+                                        <rect key="frame" x="88.5" y="529" width="158" height="34"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <state key="normal" title="Choose Your Verbs">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="addWords:" destination="Q14-sQ-fa9" eventType="touchUpInside" id="ZSu-JJ-i72"/>
                                             <segue destination="NJJ-hC-ecB" kind="show" id="ga8-SB-Tyv"/>
                                         </connections>
                                     </button>
@@ -152,6 +153,13 @@
                         <viewLayoutGuide key="safeArea" id="moT-YO-uKS"/>
                     </view>
                     <navigationItem key="navigationItem" id="kAM-GT-9Ls"/>
+                    <connections>
+                        <outlet property="addWordButton" destination="9ul-5j-BW4" id="yOv-wp-dTK"/>
+                        <outlet property="firstNoun" destination="axi-N1-oKm" id="dbl-5j-tmN"/>
+                        <outlet property="fourthNoun" destination="2kI-Aq-WOF" id="tGc-9d-hYl"/>
+                        <outlet property="secondNoun" destination="bQR-jh-4j7" id="NEP-OO-xPh"/>
+                        <outlet property="thirdNoun" destination="c7b-sY-RnW" id="M5R-SL-S3V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zOX-KM-0cz" sceneMemberID="firstResponder"/>
             </objects>
@@ -163,7 +171,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3WX-VE-NrB" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WfL-Gc-vNa">
-                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -180,46 +188,47 @@
             <objects>
                 <viewController id="NJJ-hC-ecB" customClass="VerbsViewController" customModule="BuildWeekDevLibs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d09-GS-VHJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Otu-Kc-02Q">
-                                <rect key="frame" x="20" y="84" width="280" height="376"/>
+                                <rect key="frame" x="20" y="84" width="335" height="563"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your verbs." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.44999998807907104" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uaR-i5-OyA">
-                                        <rect key="frame" x="50" y="0.0" width="180.5" height="86"/>
+                                        <rect key="frame" x="10.5" y="0.0" width="314" height="43"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Noun" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k5r-jk-6Av">
-                                        <rect key="frame" x="10" y="116" width="260" height="26.5"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verb #1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="k5r-jk-6Av">
+                                        <rect key="frame" x="10" y="73" width="315" height="84"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Noun" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ik1-aW-jqB">
-                                        <rect key="frame" x="10" y="172.5" width="260" height="26.5"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verb #2" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ik1-aW-jqB">
+                                        <rect key="frame" x="10" y="187" width="315" height="84"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Noun" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mED-wh-EjL">
-                                        <rect key="frame" x="10" y="229" width="260" height="26.5"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verb #3" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mED-wh-EjL">
+                                        <rect key="frame" x="10" y="301" width="315" height="84"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Noun" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3JG-dx-73J">
-                                        <rect key="frame" x="10" y="285.5" width="260" height="26.5"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Verb #4" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3JG-dx-73J">
+                                        <rect key="frame" x="10" y="415" width="315" height="84"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6SA-MF-YcZ">
-                                        <rect key="frame" x="42" y="342" width="196" height="34"/>
+                                        <rect key="frame" x="69.5" y="529" width="196" height="34"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <state key="normal" title="Choose Your Adjectives">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="addWords:" destination="NJJ-hC-ecB" eventType="touchUpInside" id="0jN-TP-4fx"/>
                                             <segue destination="JhH-7B-UFR" kind="show" id="S1F-I3-d6W"/>
                                         </connections>
                                     </button>
@@ -255,6 +264,13 @@
                         <viewLayoutGuide key="safeArea" id="Pve-a6-x5H"/>
                     </view>
                     <navigationItem key="navigationItem" id="Nlm-uU-jE7"/>
+                    <connections>
+                        <outlet property="addWordButton" destination="6SA-MF-YcZ" id="8P8-Cq-jC4"/>
+                        <outlet property="firstVerb" destination="k5r-jk-6Av" id="zjo-DG-1Hq"/>
+                        <outlet property="fourthVerb" destination="3JG-dx-73J" id="GEt-KB-fkP"/>
+                        <outlet property="secondVerb" destination="ik1-aW-jqB" id="EJ4-ug-tFa"/>
+                        <outlet property="thirdVerb" destination="mED-wh-EjL" id="gcg-CS-czc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vfl-cP-CRP" sceneMemberID="firstResponder"/>
             </objects>
@@ -265,46 +281,47 @@
             <objects>
                 <viewController id="JhH-7B-UFR" customClass="AdjectivesViewController" customModule="BuildWeekDevLibs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aWY-gp-T1N">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="zkx-aX-C3L">
-                                <rect key="frame" x="20" y="84" width="280" height="376"/>
+                                <rect key="frame" x="20" y="84" width="335" height="563"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your adjectives." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.44999998807907104" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gj9-wb-ayc">
-                                        <rect key="frame" x="33.5" y="0.0" width="213.5" height="86"/>
+                                        <rect key="frame" x="61" y="0.0" width="213.5" height="86"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Noun" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TIM-ZO-mlR">
-                                        <rect key="frame" x="10" y="116" width="260" height="26.5"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adjective #1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TIM-ZO-mlR">
+                                        <rect key="frame" x="10" y="116" width="315" height="73.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Noun" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cs4-bf-PYi">
-                                        <rect key="frame" x="10" y="172.5" width="260" height="26.5"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adjective #2" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cs4-bf-PYi">
+                                        <rect key="frame" x="10" y="219.5" width="315" height="73"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Noun" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZZJ-gM-1Ce">
-                                        <rect key="frame" x="10" y="229" width="260" height="26.5"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adjective #3" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZZJ-gM-1Ce">
+                                        <rect key="frame" x="10" y="322.5" width="315" height="73.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Noun" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QUd-h4-10G">
-                                        <rect key="frame" x="10" y="285.5" width="260" height="26.5"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Adjective #4" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QUd-h4-10G">
+                                        <rect key="frame" x="10" y="426" width="315" height="73"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RW7-sV-izP">
-                                        <rect key="frame" x="70" y="342" width="140" height="34"/>
+                                        <rect key="frame" x="97.5" y="529" width="140" height="34"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                         <state key="normal" title="Create My Story!">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="addWords:" destination="JhH-7B-UFR" eventType="touchUpInside" id="mS8-DC-0Sn"/>
                                             <segue destination="AKv-Fk-hKA" kind="show" id="3OA-lv-Aa2"/>
                                         </connections>
                                     </button>
@@ -340,30 +357,37 @@
                         <viewLayoutGuide key="safeArea" id="teP-s0-ItF"/>
                     </view>
                     <navigationItem key="navigationItem" id="I7D-MK-tmi"/>
+                    <connections>
+                        <outlet property="addWordButton" destination="RW7-sV-izP" id="gmo-0T-gP9"/>
+                        <outlet property="firstAdjective" destination="TIM-ZO-mlR" id="dW3-UR-aWG"/>
+                        <outlet property="fourthAdjective" destination="QUd-h4-10G" id="63t-6N-g59"/>
+                        <outlet property="secondAdjective" destination="Cs4-bf-PYi" id="lFA-BH-1mJ"/>
+                        <outlet property="thirdAdjective" destination="ZZJ-gM-1Ce" id="Q2J-6j-e0Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jI-o3-bDE" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3954" y="137"/>
         </scene>
-        <!--View Controller-->
+        <!--Story View Controller-->
         <scene sceneID="KTD-GZ-NL9">
             <objects>
-                <viewController id="AKv-Fk-hKA" customClass="ViewController" customModule="BuildWeekDevLibs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AKv-Fk-hKA" customClass="StoryViewController" customModule="BuildWeekDevLibs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mXu-0F-uXS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="U5A-qJ-2vC">
-                                <rect key="frame" x="20" y="84" width="280" height="376"/>
+                                <rect key="frame" x="20" y="84" width="335" height="563"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Dev Lib Masterpiece!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.44999998807907104" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WKy-Xd-aNZ">
-                                        <rect key="frame" x="32.5" y="0.0" width="215.5" height="86"/>
+                                        <rect key="frame" x="60" y="0.0" width="215.5" height="86"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iRf-ox-lRH">
-                                        <rect key="frame" x="10" y="116" width="260" height="260"/>
+                                        <rect key="frame" x="10" y="116" width="315" height="447"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -389,6 +413,9 @@
                     <navigationItem key="navigationItem" id="5be-jL-UxY">
                         <barButtonItem key="rightBarButtonItem" title="Share" id="dhg-5r-ji8"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="storyTextView" destination="iRf-ox-lRH" id="y38-tt-u03"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7lH-X2-A3x" sceneMemberID="firstResponder"/>
             </objects>
