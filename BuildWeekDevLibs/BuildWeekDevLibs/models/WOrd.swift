@@ -1,5 +1,5 @@
 //
-//  WOrd.swift
+//  Word.swift
 //  BuildWeekDevLibs
 //
 //  Created by brian vilchez on 8/27/19.

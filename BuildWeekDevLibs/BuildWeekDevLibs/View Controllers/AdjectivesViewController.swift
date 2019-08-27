@@ -2,7 +2,7 @@
 //  AdjectivesViewController.swift
 //  BuildWeekDevLibs
 //
-//  Created by brian vilchez on 8/27/19.
+//  Created by Brian Vilchez and Ciara Beitel on 8/27/19.
 //  Copyright © 2019 Alex Shillingford. All rights reserved.
 //
 
@@ -12,17 +12,19 @@ protocol createAdjectiveDelegate {
     func createAdjectives(with word: [Word])
 }
 
-
 class AdjectivesViewController: UIViewController {
-
-
+    
     //MARK: - properties
-    @IBOutlet weak var firstAdjectiveLabel: UILabel!
-    @IBOutlet weak var secondAdjectiveLabel: UILabel!
-    @IBOutlet weak var thirdAdjectiveLabel: UILabel!
-    @IBOutlet weak var fourthAdjectiveLabel: UILabel!
-    @IBOutlet weak var addWordButton: UIButton!
+    
     var delegate: createAdjectiveDelegate?
+
+    //MARK: - outlets
+    
+    @IBOutlet weak var firstAdjective: UITextField!
+    @IBOutlet weak var secondAdjective: UITextField!
+    @IBOutlet weak var thirdAdjective: UITextField!
+    @IBOutlet weak var fourthAdjective: UITextField!
+    @IBOutlet weak var addWordButton: UIButton!
     
     //MARK: - actions
     
@@ -32,36 +34,35 @@ class AdjectivesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        styleSheet()
+        //styleSheet()
     }
-    
 }
 
 extension AdjectivesViewController {
     
-    private func styleSheet() {
-        addWordButton.layer.masksToBounds = true
-        addWordButton.layer.cornerRadius = 10
-        addWordButton.layer.shadowOffset = CGSize(width: 3, height: 3)
-        addWordButton.layer.shadowRadius = 5
-        addWordButton.layer.shadowOpacity = 0.5
-    }
+//    private func styleSheet() {
+//        addWordButton.layer.masksToBounds = true
+//        addWordButton.layer.cornerRadius = 10
+//        addWordButton.layer.shadowOffset = CGSize(width: 3, height: 3)
+//        addWordButton.layer.shadowRadius = 5
+//        addWordButton.layer.shadowOpacity = 0.5
+//    }
     
     func adjectiveWords() -> [Word] {
         var adjectiveWords: [Word] = []
-        if let firstadjective = firstAdjectiveLabel.text,!firstadjective.isEmpty {
+        if let firstadjective = firstAdjective.text,!firstadjective.isEmpty {
             let adjectiveWord = Word(word: firstadjective)
             adjectiveWords.append(adjectiveWord)
         }
-        if let secondAdjective = secondAdjectiveLabel.text, !secondAdjective.isEmpty {
+        if let secondAdjective = secondAdjective.text, !secondAdjective.isEmpty {
             let adjectiveWord = Word(word: secondAdjective)
             adjectiveWords.append(adjectiveWord)
         }
-        if let thirdAdjective = thirdAdjectiveLabel.text, !thirdAdjective.isEmpty {
+        if let thirdAdjective = thirdAdjective.text, !thirdAdjective.isEmpty {
             let adjectiveWord = Word(word: thirdAdjective)
             adjectiveWords.append(adjectiveWord)
         }
-        if let fourthAdjective = fourthAdjectiveLabel.text, !fourthAdjective.isEmpty {
+        if let fourthAdjective = fourthAdjective.text, !fourthAdjective.isEmpty {
             let adjectiveWord = Word(word: fourthAdjective)
             adjectiveWords.append(adjectiveWord)
         }
