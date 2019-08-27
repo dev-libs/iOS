@@ -45,27 +45,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		77DFEAD523144AAE004C1BD7 /* Model Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Model Controllers";
-			sourceTree = "<group>";
-		};
-		77DFEAD623144AB5004C1BD7 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		77DFEAD723144ABB004C1BD7 /* Custom Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Custom Views";
-			sourceTree = "<group>";
-		};
 		77DFEAD823144AD3004C1BD7 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,9 +83,6 @@
 			children = (
 				77DFEAD923144ADE004C1BD7 /* Storyboards */,
 				77DFEAD823144AD3004C1BD7 /* View Controllers */,
-				77DFEAD723144ABB004C1BD7 /* Custom Views */,
-				77DFEAD623144AB5004C1BD7 /* Models */,
-				77DFEAD523144AAE004C1BD7 /* Model Controllers */,
 				77DFEAD423144AA0004C1BD7 /* Resources */,
 			);
 			path = BuildWeekDevLibs;
