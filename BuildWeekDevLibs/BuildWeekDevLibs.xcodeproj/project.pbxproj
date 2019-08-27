@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		A25993B723143E0500FE8BD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25993B623143E0500FE8BD2 /* AppDelegate.swift */; };
-		A25993B923143E0500FE8BD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25993B823143E0500FE8BD2 /* ViewController.swift */; };
 		A25993BC23143E0500FE8BD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25993BA23143E0500FE8BD2 /* Main.storyboard */; };
 		A25993BE23143E0600FE8BD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A25993BD23143E0600FE8BD2 /* Assets.xcassets */; };
 		A25993C123143E0600FE8BD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25993BF23143E0600FE8BD2 /* LaunchScreen.storyboard */; };
+		DD6BD5272315733900F1671C /* WOrd.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6BD5262315733900F1671C /* WOrd.swift */; };
+		DD6BD5292315735300F1671C /* WordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6BD5282315735300F1671C /* WordController.swift */; };
+		DD6BD52B2315737B00F1671C /* VerbsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6BD52A2315737B00F1671C /* VerbsViewController.swift */; };
+		DD6BD52D2315738600F1671C /* NounsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6BD52C2315738600F1671C /* NounsViewController.swift */; };
+		DD6BD52F2315739400F1671C /* AdjectivesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6BD52E2315739400F1671C /* AdjectivesViewController.swift */; };
+		DD6BD5312315739E00F1671C /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6BD5302315739E00F1671C /* StoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A25993B323143E0500FE8BD2 /* BuildWeekDevLibs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuildWeekDevLibs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A25993B623143E0500FE8BD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A25993B823143E0500FE8BD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A25993BB23143E0500FE8BD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A25993BD23143E0600FE8BD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A25993C023143E0600FE8BD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A25993C223143E0600FE8BD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD6BD5262315733900F1671C /* WOrd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WOrd.swift; sourceTree = "<group>"; };
+		DD6BD5282315735300F1671C /* WordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordController.swift; sourceTree = "<group>"; };
+		DD6BD52A2315737B00F1671C /* VerbsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbsViewController.swift; sourceTree = "<group>"; };
+		DD6BD52C2315738600F1671C /* NounsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NounsViewController.swift; sourceTree = "<group>"; };
+		DD6BD52E2315739400F1671C /* AdjectivesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjectivesViewController.swift; sourceTree = "<group>"; };
+		DD6BD5302315739E00F1671C /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +96,52 @@
 				77DFEAD423144AA0004C1BD7 /* Resources */,
 			);
 			path = BuildWeekDevLibs;
+			sourceTree = "<group>";
+		};
+		DD6BD5212315724A00F1671C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A25993C223143E0600FE8BD2 /* Info.plist */,
+				A25993B623143E0500FE8BD2 /* AppDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DD6BD5222315725F00F1671C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD6BD52A2315737B00F1671C /* VerbsViewController.swift */,
+				DD6BD52C2315738600F1671C /* NounsViewController.swift */,
+				DD6BD52E2315739400F1671C /* AdjectivesViewController.swift */,
+				DD6BD5302315739E00F1671C /* StoryViewController.swift */,
+				DD6BD5212315724A00F1671C /* Resources */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		DD6BD5232315726E00F1671C /* models */ = {
+			isa = PBXGroup;
+			children = (
+				DD6BD5262315733900F1671C /* WOrd.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		DD6BD5242315727500F1671C /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD6BD5282315735300F1671C /* WordController.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		DD6BD5252315728200F1671C /* Story boards */ = {
+			isa = PBXGroup;
+			children = (
+				A25993BF23143E0600FE8BD2 /* LaunchScreen.storyboard */,
+				A25993BA23143E0500FE8BD2 /* Main.storyboard */,
+			);
+			path = "Story boards";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,8 +215,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A25993B923143E0500FE8BD2 /* ViewController.swift in Sources */,
+				DD6BD52D2315738600F1671C /* NounsViewController.swift in Sources */,
 				A25993B723143E0500FE8BD2 /* AppDelegate.swift in Sources */,
+				DD6BD52B2315737B00F1671C /* VerbsViewController.swift in Sources */,
+				DD6BD5272315733900F1671C /* WOrd.swift in Sources */,
+				DD6BD52F2315739400F1671C /* AdjectivesViewController.swift in Sources */,
+				DD6BD5312315739E00F1671C /* StoryViewController.swift in Sources */,
+				DD6BD5292315735300F1671C /* WordController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
