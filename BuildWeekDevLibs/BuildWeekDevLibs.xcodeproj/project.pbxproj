@@ -45,6 +45,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77DFEAD423144AA0004C1BD7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A25993B623143E0500FE8BD2 /* AppDelegate.swift */,
+				A25993BD23143E0600FE8BD2 /* Assets.xcassets */,
+				A25993C223143E0600FE8BD2 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		77DFEAD823144AD3004C1BD7 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A25993B823143E0500FE8BD2 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		77DFEAD923144ADE004C1BD7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A25993BA23143E0500FE8BD2 /* Main.storyboard */,
+				A25993BF23143E0600FE8BD2 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		A25993AA23143E0500FE8BD2 = {
 			isa = PBXGroup;
 			children = (
@@ -64,11 +91,9 @@
 		A25993B523143E0500FE8BD2 /* BuildWeekDevLibs */ = {
 			isa = PBXGroup;
 			children = (
-				DD6BD5252315728200F1671C /* Story boards */,
-				DD6BD5242315727500F1671C /* Model Controllers */,
-				DD6BD5232315726E00F1671C /* models */,
-				DD6BD5222315725F00F1671C /* View Controllers */,
-				A25993BD23143E0600FE8BD2 /* Assets.xcassets */,
+				77DFEAD923144ADE004C1BD7 /* Storyboards */,
+				77DFEAD823144AD3004C1BD7 /* View Controllers */,
+				77DFEAD423144AA0004C1BD7 /* Resources */,
 			);
 			path = BuildWeekDevLibs;
 			sourceTree = "<group>";
@@ -343,7 +368,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/BuildWeekDevLibs/View Controllers/Resources/Info.plist";
+				DEVELOPMENT_TEAM = 63GJL7X8L2;
+				INFOPLIST_FILE = "$(SRCROOT)/BuildWeekDevLibs/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -360,7 +386,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/BuildWeekDevLibs/View Controllers/Resources/Info.plist";
+				DEVELOPMENT_TEAM = 63GJL7X8L2;
+				INFOPLIST_FILE = "$(SRCROOT)/BuildWeekDevLibs/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
