@@ -26,11 +26,14 @@ class StoryViewController: UIViewController, UITextViewDelegate {
     
     func updateViews() {
         guard let wordController = wordController else { return }
-        for (_ , element) in wordController.nouns.enumerated() {
-            storyTextView.text = """
-            Forget the fat lady! \(element.word) You're obsessed with the fat lady! Drive us out of here! Yes, Yes, without the oops! I was part of something special. I was part of something special. I gave it a cold? I gave it a virus. A computer virus. They're using our own satellites against us. And the clock is ticking.
-            Must go faster. This thing comes fully loaded. AM/FM radio, reclining bucket seats, and... power windows. Eventually, you do plan to have dinosaurs on your dinosaur tour, right? Remind me to thank John for a lovely weekend. God creates dinosaurs. God destroys dinosaurs. God creates Man. Man destroys God. Man creates Dinosaurs.
-            """
-        }
+        storyTextView.text = """
+        I would like to recommend my \(wordController.nouns[0].word), for the job of assistant \(wordController.nouns[1].word).
+        He has just graduated and has a degree in \(wordController.verbs[0].word).
+        He has experience teaching \(wordController.nouns[2].word) how to play games.
+        He is \(wordController.adjectives[0].word) and \(wordController.adjectives[1].word).
+        During vacations, he use to \(wordController.verbs[1].word) our \(wordController.adjectives[2].word) dogs.
+        He is smart as a \(wordController.nouns[3].word) and likes to \(wordController.verbs[2].word) for fun.
+        Please \(wordController.verbs[3].word) back quickly, because I think he is the most \(wordController.adjectives[3].word) person there has ever been.
+        """
     }
 }
