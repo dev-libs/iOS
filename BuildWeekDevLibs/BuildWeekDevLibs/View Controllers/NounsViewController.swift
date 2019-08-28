@@ -9,13 +9,13 @@
 import UIKit
 
 protocol  CreateNounDelegate {
-    func createWords(with words: [Word])
+    func createNouns(with words: [Word])
 }
 
 class NounsViewController: UIViewController {
 
     //MARK: - properties
-    
+    var wordController = WordController()
     var delegate: CreateNounDelegate?
     
     //MARK: - outlets
@@ -29,24 +29,28 @@ class NounsViewController: UIViewController {
     // MARK: - actions
     
     @IBAction func addWords(_ sender: UIButton) {
-        delegate?.createWords(with:nounWords())
+        wordController.addNouns(nounWords())
+      //  delegate?.createNouns(with:nounWords())
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //styleSheet()
+        styleSheet()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "VerbShowSegue" {
+           guard let verbVC = segue.destination as? VerbsViewController else {return}
+            verbVC.wordController = wordController
+        }
     }
 }
 
 extension NounsViewController {
     
-//    private func styleSheet() {
-//        addWordButton.layer.masksToBounds = true
-//        addWordButton.layer.cornerRadius = 10
-//        addWordButton.layer.shadowOffset = CGSize(width: 3, height: 3)
-//        addWordButton.layer.shadowRadius = 5
-//        addWordButton.layer.shadowOpacity = 0.5
-//    }
+    private func styleSheet() {
+      addWordButton.layer.cornerRadius = 10
+      
+    }
     
     func nounWords() -> [Word] {
         var nounWords:[Word] = []

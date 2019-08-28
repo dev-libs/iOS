@@ -37,7 +37,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJG-Gc-Vze">
-                                        <rect key="frame" x="146.5" y="413" width="42" height="34"/>
+                                        <rect key="frame" x="120" y="413" width="95" height="34"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="T7z-o0-BIf"/>
@@ -54,6 +54,8 @@
                                 <constraints>
                                     <constraint firstItem="741-SE-pKy" firstAttribute="centerX" secondItem="qtu-MD-6WP" secondAttribute="centerX" id="I7U-cX-oGt"/>
                                     <constraint firstItem="8w2-r5-IKr" firstAttribute="centerX" secondItem="qtu-MD-6WP" secondAttribute="centerX" id="JWm-co-Sd0"/>
+                                    <constraint firstAttribute="trailing" secondItem="xJG-Gc-Vze" secondAttribute="trailing" constant="120" id="U2O-Q0-OOD"/>
+                                    <constraint firstItem="xJG-Gc-Vze" firstAttribute="leading" secondItem="qtu-MD-6WP" secondAttribute="leading" constant="120" id="We9-Qr-Zfx"/>
                                     <constraint firstItem="xJG-Gc-Vze" firstAttribute="centerX" secondItem="qtu-MD-6WP" secondAttribute="centerX" id="i6N-ba-HHb"/>
                                 </constraints>
                             </stackView>
@@ -67,6 +69,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="startButton" destination="xJG-Gc-Vze" id="TRV-kb-ulg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -110,20 +115,21 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ul-5j-BW4">
-                                        <rect key="frame" x="88.5" y="529" width="158" height="34"/>
+                                        <rect key="frame" x="100" y="529" width="135" height="34"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                        <state key="normal" title="Choose Your Verbs">
+                                        <state key="normal" title="next verbs">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="addWords:" destination="Q14-sQ-fa9" eventType="touchUpInside" id="ZSu-JJ-i72"/>
-                                            <segue destination="NJJ-hC-ecB" kind="show" id="ga8-SB-Tyv"/>
+                                            <segue destination="NJJ-hC-ecB" kind="show" identifier="VerbShowSegue" id="ga8-SB-Tyv"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="bQR-jh-4j7" firstAttribute="centerX" secondItem="hgh-Mg-wut" secondAttribute="centerX" id="4fM-YZ-xll"/>
+                                    <constraint firstAttribute="trailing" secondItem="9ul-5j-BW4" secondAttribute="trailing" constant="100" id="6x2-M3-01M"/>
                                     <constraint firstItem="axi-N1-oKm" firstAttribute="leading" secondItem="hgh-Mg-wut" secondAttribute="leading" constant="10" id="9UL-7Y-hSt"/>
                                     <constraint firstItem="c7b-sY-RnW" firstAttribute="centerX" secondItem="hgh-Mg-wut" secondAttribute="centerX" id="BuW-85-tZu"/>
                                     <constraint firstItem="c7b-sY-RnW" firstAttribute="leading" secondItem="hgh-Mg-wut" secondAttribute="leading" constant="10" id="CiO-Ja-xkW"/>
@@ -137,6 +143,7 @@
                                     <constraint firstItem="9ul-5j-BW4" firstAttribute="centerX" secondItem="hgh-Mg-wut" secondAttribute="centerX" id="ZYO-R8-qWI"/>
                                     <constraint firstItem="c7b-sY-RnW" firstAttribute="height" secondItem="axi-N1-oKm" secondAttribute="height" id="aLC-qm-BDK"/>
                                     <constraint firstItem="2kI-Aq-WOF" firstAttribute="leading" secondItem="hgh-Mg-wut" secondAttribute="leading" constant="10" id="d2B-ZW-qLL"/>
+                                    <constraint firstItem="9ul-5j-BW4" firstAttribute="leading" secondItem="hgh-Mg-wut" secondAttribute="leading" constant="100" id="mKY-Bm-AbL"/>
                                     <constraint firstItem="GN9-3p-ktt" firstAttribute="centerX" secondItem="hgh-Mg-wut" secondAttribute="centerX" id="p7D-Za-OjE"/>
                                     <constraint firstItem="bQR-jh-4j7" firstAttribute="height" secondItem="axi-N1-oKm" secondAttribute="height" id="smK-pd-Dw1"/>
                                     <constraint firstAttribute="trailing" secondItem="bQR-jh-4j7" secondAttribute="trailing" constant="10" id="yrC-7N-u5D"/>
@@ -229,7 +236,7 @@
                                         </state>
                                         <connections>
                                             <action selector="addWords:" destination="NJJ-hC-ecB" eventType="touchUpInside" id="0jN-TP-4fx"/>
-                                            <segue destination="JhH-7B-UFR" kind="show" id="S1F-I3-d6W"/>
+                                            <segue destination="JhH-7B-UFR" kind="show" identifier="AdjectiveShowSegue" id="S1F-I3-d6W"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -322,7 +329,7 @@
                                         </state>
                                         <connections>
                                             <action selector="addWords:" destination="JhH-7B-UFR" eventType="touchUpInside" id="mS8-DC-0Sn"/>
-                                            <segue destination="AKv-Fk-hKA" kind="show" id="3OA-lv-Aa2"/>
+                                            <segue destination="AKv-Fk-hKA" kind="show" identifier="StoryDetailShowSegue" id="3OA-lv-Aa2"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -411,7 +418,11 @@
                         <viewLayoutGuide key="safeArea" id="PvI-Id-a1o"/>
                     </view>
                     <navigationItem key="navigationItem" id="5be-jL-UxY">
-                        <barButtonItem key="rightBarButtonItem" title="Share" id="dhg-5r-ji8"/>
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="dhg-5r-ji8">
+                            <connections>
+                                <action selector="shareButton:" destination="AKv-Fk-hKA" id="nSL-dn-7bU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="storyTextView" destination="iRf-ox-lRH" id="y38-tt-u03"/>

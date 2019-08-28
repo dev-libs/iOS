@@ -9,13 +9,13 @@
 import UIKit
 
 protocol CreateVerbDelegate {
-    func createVerbs(with word: [Word] )
+    func createVerbs(with words: [Word] )
 }
 
 class VerbsViewController: UIViewController {
     
     //MARK: - properties
-    
+    var wordController = WordController()
     var delegate: CreateVerbDelegate?
 
     //MARK: - outlets
@@ -35,6 +35,12 @@ class VerbsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //styleSheet()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AdjectiveShowSegue" {
+            guard let adjectiveVC = segue.destination as? VerbsViewController else {return}
+            adjectiveVC.wordController = wordController
+        }
     }
 }
 

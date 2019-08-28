@@ -11,7 +11,7 @@ class WordController {
     
     private(set) var nouns: [Word]
     private(set) var verbs: [Word]
-    private(set) var adjectives:[Word]
+    private(set) var adjectives: [Word]
     
     init() {
         nouns = []

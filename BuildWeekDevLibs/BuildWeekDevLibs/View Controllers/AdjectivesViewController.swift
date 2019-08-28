@@ -8,15 +8,15 @@
 
 import UIKit
 
-protocol createAdjectiveDelegate {
-    func createAdjectives(with word: [Word])
+protocol CreateAdjectiveDelegate {
+    func createAdjectives(with words: [Word])
 }
 
 class AdjectivesViewController: UIViewController {
     
     //MARK: - properties
-    
-    var delegate: createAdjectiveDelegate?
+    var wordController = WordController()
+    var delegate: CreateAdjectiveDelegate?
 
     //MARK: - outlets
     
@@ -35,6 +35,12 @@ class AdjectivesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //styleSheet()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "StoryDetailShowSegue" {
+            guard let storyDetailVC = segue.destination as? StoryViewController else {return}
+            storyDetailVC.wordController = wordController
+        }
     }
 }
 
