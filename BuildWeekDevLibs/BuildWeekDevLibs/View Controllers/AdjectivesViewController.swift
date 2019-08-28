@@ -8,16 +8,13 @@
 
 import UIKit
 
-protocol createAdjectiveDelegate {
-    func createAdjectives(with word: [Word])
-}
+
 
 class AdjectivesViewController: UIViewController {
     
     //MARK: - properties
+    var delegate: CreateStoryDelegate?
     
-    var delegate: createAdjectiveDelegate?
-
     //MARK: - outlets
     
     @IBOutlet weak var firstAdjective: UITextField!
@@ -29,24 +26,28 @@ class AdjectivesViewController: UIViewController {
     //MARK: - actions
     
     @IBAction func addWords(_ sender: UIButton) {
-        delegate?.createAdjectives(with: adjectiveWords())
+       addwords(with: adjectiveWords())
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //styleSheet()
+        styleSheet()
     }
+
 }
 
 extension AdjectivesViewController {
     
-//    private func styleSheet() {
-//        addWordButton.layer.masksToBounds = true
-//        addWordButton.layer.cornerRadius = 10
-//        addWordButton.layer.shadowOffset = CGSize(width: 3, height: 3)
-//        addWordButton.layer.shadowRadius = 5
-//        addWordButton.layer.shadowOpacity = 0.5
-//    }
+    private func styleSheet() {
+        
+        addWordButton.layer.cornerRadius = 15
+        addWordButton.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        addWordButton.layer.shadowOffset = CGSize(width: addWordButton.layer.borderWidth, height: 9)
+        addWordButton.layer.masksToBounds = false
+        addWordButton.layer.shadowOpacity = 6
+        
+
+    }
     
     func adjectiveWords() -> [Word] {
         var adjectiveWords: [Word] = []
@@ -68,4 +69,20 @@ extension AdjectivesViewController {
         }
         return adjectiveWords
     }
+}
+extension AdjectivesViewController: CreateStoryDelegate {
+    func addwords(with words: [Word]) {
+        let wordController = WordController()
+        wordController.addAdjectives(words)
+        print(wordController.nouns.count)
+        print(wordController.verbs.count)
+        print(wordController.adjectives.count)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "StoryDetailShowSegue" {
+            guard let storyVC = segue.destination as? StoryViewController else {return}
+            storyVC.delegate = self
+        }
+    }
+    
 }

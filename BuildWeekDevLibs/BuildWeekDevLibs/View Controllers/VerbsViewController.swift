@@ -8,16 +8,12 @@
 
 import UIKit
 
-protocol CreateVerbDelegate {
-    func createVerbs(with word: [Word] )
-}
 
 class VerbsViewController: UIViewController {
     
     //MARK: - properties
-    
-    var delegate: CreateVerbDelegate?
-
+    var delegate: CreateStoryDelegate?
+    var wordController: WordController?
     //MARK: - outlets
 
     @IBOutlet weak var firstVerb: UITextField!
@@ -29,24 +25,25 @@ class VerbsViewController: UIViewController {
     //MARK: - actions
     
     @IBAction func addWords(_ sender: UIButton) {
-        delegate?.createVerbs(with: verbWords())
+            addwords(with: verbWords())
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //styleSheet()
+        styleSheet()
     }
+ 
 }
 
 extension VerbsViewController {
     
-//    private func styleSheet() {
-//        addWordButton.layer.masksToBounds = true
-//        addWordButton.layer.cornerRadius = 10
-//        addWordButton.layer.shadowOffset = CGSize(width: 3, height: 3)
-//        addWordButton.layer.shadowRadius = 5
-//        addWordButton.layer.shadowOpacity = 0.5
-//    }
+    private func styleSheet() {
+        addWordButton.layer.cornerRadius = 15
+        addWordButton.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        addWordButton.layer.shadowOffset = CGSize(width: addWordButton.layer.borderWidth, height: 9)
+        addWordButton.layer.masksToBounds = false
+        addWordButton.layer.shadowOpacity = 6
+    }
     
     private func verbWords() -> [Word] {
         var verbs: [Word] = []
@@ -68,4 +65,19 @@ extension VerbsViewController {
         }
         return verbs
     }
+}
+extension VerbsViewController: CreateStoryDelegate {
+    
+    func addwords(with words: [Word]) {
+        let wordController = WordController()
+        wordController.addVerbs(words)
+        print(wordController.no)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AdjectiveShowSegue" {
+            guard let adjectiveVC = segue.destination as? AdjectivesViewController else {return}
+            adjectiveVC.delegate = self
+        }
+    }
+    
 }
