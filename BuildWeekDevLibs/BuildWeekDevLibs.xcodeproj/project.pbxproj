@@ -347,7 +347,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 63GJL7X8L2;
+				DEVELOPMENT_TEAM = 8P7A77YCZV;
 				INFOPLIST_FILE = "$(SRCROOT)/BuildWeekDevLibs/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -365,7 +365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 63GJL7X8L2;
+				DEVELOPMENT_TEAM = 8P7A77YCZV;
 				INFOPLIST_FILE = "$(SRCROOT)/BuildWeekDevLibs/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
