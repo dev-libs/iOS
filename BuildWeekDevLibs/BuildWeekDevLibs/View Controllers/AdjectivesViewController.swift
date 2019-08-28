@@ -8,15 +8,11 @@
 
 import UIKit
 
-protocol createAdjectiveDelegate {
-    func createAdjectives(with word: [Word])
-}
-
 class AdjectivesViewController: UIViewController {
     
     //MARK: - properties
     
-    var delegate: createAdjectiveDelegate?
+    var wordController: WordController?
 
     //MARK: - outlets
     
@@ -29,43 +25,36 @@ class AdjectivesViewController: UIViewController {
     //MARK: - actions
     
     @IBAction func addWords(_ sender: UIButton) {
-        delegate?.createAdjectives(with: adjectiveWords())
+        var adjectives: [Word] = []
+        if let firstAdjective = firstAdjective.text,!firstAdjective.isEmpty {
+            let adjectiveWord = Word(word: firstAdjective)
+            adjectives.append(adjectiveWord)
+        }
+        if let secondAdjective = secondAdjective.text, !secondAdjective.isEmpty {
+            let adjectiveWord = Word(word: secondAdjective)
+            adjectives.append(adjectiveWord)
+        }
+        if let thirdAdjective = thirdAdjective.text, !thirdAdjective.isEmpty {
+            let adjectiveWord = Word(word: thirdAdjective)
+            adjectives.append(adjectiveWord)
+        }
+        if let fourthAdjective = fourthAdjective.text, !fourthAdjective.isEmpty {
+            let adjectiveWord = Word(word: fourthAdjective)
+            adjectives.append(adjectiveWord)
+        }
+        guard let wordController = wordController else { return }
+        wordController.addAdjectives(adjectives)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //styleSheet()
     }
-}
-
-extension AdjectivesViewController {
     
-//    private func styleSheet() {
-//        addWordButton.layer.masksToBounds = true
-//        addWordButton.layer.cornerRadius = 10
-//        addWordButton.layer.shadowOffset = CGSize(width: 3, height: 3)
-//        addWordButton.layer.shadowRadius = 5
-//        addWordButton.layer.shadowOpacity = 0.5
-//    }
-    
-    func adjectiveWords() -> [Word] {
-        var adjectiveWords: [Word] = []
-        if let firstadjective = firstAdjective.text,!firstadjective.isEmpty {
-            let adjectiveWord = Word(word: firstadjective)
-            adjectiveWords.append(adjectiveWord)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowStorySegue" {
+            guard let storyVC = segue.destination as? StoryViewController else { return }
+            guard let wordController = wordController else { return }
+            storyVC.wordController = wordController
         }
-        if let secondAdjective = secondAdjective.text, !secondAdjective.isEmpty {
-            let adjectiveWord = Word(word: secondAdjective)
-            adjectiveWords.append(adjectiveWord)
-        }
-        if let thirdAdjective = thirdAdjective.text, !thirdAdjective.isEmpty {
-            let adjectiveWord = Word(word: thirdAdjective)
-            adjectiveWords.append(adjectiveWord)
-        }
-        if let fourthAdjective = fourthAdjective.text, !fourthAdjective.isEmpty {
-            let adjectiveWord = Word(word: fourthAdjective)
-            adjectiveWords.append(adjectiveWord)
-        }
-        return adjectiveWords
     }
 }
