@@ -14,13 +14,21 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      startButton.layer.cornerRadius = 10
-        startButton.layer.shadowColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
-        startButton.layer.shadowOffset = CGSize(width: startButton.layer.borderWidth, height: 2)
-        startButton.layer.masksToBounds = false
-        startButton.layer.shadowOpacity = 1
+      styleSheet()
     }
-
+    
+    /// style sheet for button.
+    func styleSheet() {
+        
+        startButton.layer.cornerRadius = 15
+        startButton.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        startButton.layer.shadowOffset = CGSize(width: startButton.layer.borderWidth, height: 9)
+        startButton.layer.masksToBounds = false
+        startButton.layer.shadowOpacity = 6
+       
+    }
+    
 
 }
+
 

@@ -8,15 +8,11 @@
 
 import UIKit
 
-protocol  CreateNounDelegate {
-    func createNouns(with words: [Word])
-}
 
 class NounsViewController: UIViewController {
 
     //MARK: - properties
-    var wordController = WordController()
-    var delegate: CreateNounDelegate?
+    var wordcontroller = WordController()
     
     //MARK: - outlets
 
@@ -29,28 +25,28 @@ class NounsViewController: UIViewController {
     // MARK: - actions
     
     @IBAction func addWords(_ sender: UIButton) {
-        wordController.addNouns(nounWords())
-      //  delegate?.createNouns(with:nounWords())
+        wordcontroller.addNouns(nounWords())
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         styleSheet()
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "VerbShowSegue" {
-           guard let verbVC = segue.destination as? VerbsViewController else {return}
-            verbVC.wordController = wordController
-        }
-    }
+    
 }
 
 extension NounsViewController {
     
-    private func styleSheet() {
-      addWordButton.layer.cornerRadius = 10
-      
+   private func styleSheet() {
+        
+        addWordButton.layer.cornerRadius = 15
+        addWordButton.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        addWordButton.layer.shadowOffset = CGSize(width: addWordButton.layer.borderWidth, height: 9)
+        addWordButton.layer.masksToBounds = false
+        addWordButton.layer.shadowOpacity = 6
     }
+    
+ 
     
     func nounWords() -> [Word] {
         var nounWords:[Word] = []
@@ -73,3 +69,18 @@ extension NounsViewController {
         return nounWords
     }
 }
+
+extension NounsViewController: CreateStoryDelegate {
+    func addwords(with words: [Word]) {
+        let wordController = WordController()
+        wordController.addNouns(words)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "VerbShowSegue" {
+            guard let verbVC = segue.destination as? VerbsViewController else {return}
+            verbVC.delegate = self
+            verbVC.wordController = wordcontroller
+        }
+    }
+}
+

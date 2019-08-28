@@ -7,14 +7,15 @@
 //
 
 import UIKit
+protocol CreateStoryDelegate {
+    func addwords(with words: [Word])
+}
+
 
 class StoryViewController: UIViewController {
     
     //MARK: - properties
-    var wordController: WordController?
-    var nounDelegate: CreateNounDelegate?
-    var verbDelegate: CreateVerbDelegate?
-    var adjectiveDelegate: CreateAdjectiveDelegate?
+    var delegate: CreateStoryDelegate?
     //MARK: - outlets
     
     @IBOutlet weak var storyTextView: UITextView!
@@ -27,19 +28,10 @@ class StoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateViews()
-        if let wordController = wordController{
-        for noun in wordController.nouns {
-      
-            print("noun: \(noun.word)")
-        }
-        }
     }
 
     func updateViews() {
-        storyTextView.text = "HIIIIII!!!!!"
-       // for noun in wordController.nouns {
-           // storyTextView.text += "\(noun.word) /n"
-   
+       
     }
 
     func showStory() {
@@ -54,25 +46,7 @@ class StoryViewController: UIViewController {
     }
 
 }
-extension StoryViewController: CreateNounDelegate, CreateVerbDelegate, CreateAdjectiveDelegate{
-    
-    func createAdjectives(with words: [Word]) {
-        adjectiveDelegate = self
-        wordController?.addAdjectives(words)
-        print(words)
-    }
-    
-    func createVerbs(with words: [Word]) {
-        verbDelegate = self
-        wordController?.addVerbs(words)
-        print(words)
-    }
-    
-    func createNouns(with words: [Word]) {
-        nounDelegate = self
-        wordController?.addNouns(words)
-        print(words)
-    }
-}
+
+
 
 
