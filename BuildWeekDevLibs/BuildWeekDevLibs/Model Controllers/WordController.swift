@@ -12,7 +12,7 @@ class WordController {
     
     private(set) var nouns: [Word]
     private(set) var verbs: [Word]
-    private(set) var adjectives:[Word]
+    private(set) var adjectives: [Word]
     
     init() {
         nouns = []
@@ -31,4 +31,21 @@ class WordController {
     func addAdjectives(_ incomingAdjectives: [Word]){
         adjectives.append(contentsOf: incomingAdjectives)
     }
+}
+extension WordController {
+    
+    func createNouns(with words: [Word]) {
+        addNouns(words)
+    }
+    
+    func createVerbs(with words: [Word]) {
+        addVerbs(words)
+    }
+    
+    func createAdjectives(with words: [Word]) {
+        addAdjectives(words)
+    }
+    
+    
+    
 }

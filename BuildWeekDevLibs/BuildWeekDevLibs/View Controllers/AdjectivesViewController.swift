@@ -2,7 +2,7 @@
 //  AdjectivesViewController.swift
 //  BuildWeekDevLibs
 //
-//  Created by Brian Vilchez and Ciara Beitel on 8/27/19.
+//  Created by Brian Vilchez and Ciara Beitel on 8/28/19.
 //  Copyright © 2019 Alex Shillingford. All rights reserved.
 //
 
