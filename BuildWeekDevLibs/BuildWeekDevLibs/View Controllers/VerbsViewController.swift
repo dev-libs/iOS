@@ -23,6 +23,9 @@ class VerbsViewController: UIViewController {
     @IBOutlet weak var addWordButton: UIButton!
     
     //MARK: - actions
+    @IBAction func arrowBackButton(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
     
     @IBAction func addWords(_ sender: UIButton) {
             addwords(with: verbWords())
@@ -68,10 +71,21 @@ extension VerbsViewController {
 }
 extension VerbsViewController: CreateStoryDelegate {
     
+<<<<<<< Updated upstream
     func addwords(with words: [Word]) {
         let wordController = WordController()
         wordController.addVerbs(words)
         print(wordController.no)
+=======
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addWordButton.styleSheet()
+        firstVerb.becomeFirstResponder()
+        firstVerb.delegate = self
+        secondVerb.delegate = self
+        thirdVerb.delegate = self
+        fourthVerb.delegate = self
+>>>>>>> Stashed changes
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AdjectiveShowSegue" {
@@ -80,4 +94,27 @@ extension VerbsViewController: CreateStoryDelegate {
         }
     }
     
+}
+extension VerbsViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == firstVerb {
+            textField.resignFirstResponder()
+            secondVerb.becomeFirstResponder()
+            return true
+        } else if textField == secondVerb {
+            textField.resignFirstResponder()
+            thirdVerb.becomeFirstResponder()
+            return true
+        } else if textField == thirdVerb {
+            textField.resignFirstResponder()
+            fourthVerb.becomeFirstResponder()
+            return true
+        } else if textField == fourthVerb {
+            textField.resignFirstResponder()
+            return true
+        } else {
+            return false
+        }
+    }
 }

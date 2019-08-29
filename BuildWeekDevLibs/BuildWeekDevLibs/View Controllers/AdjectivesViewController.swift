@@ -24,6 +24,9 @@ class AdjectivesViewController: UIViewController {
     @IBOutlet weak var addWordButton: UIButton!
     
     //MARK: - actions
+    @IBAction func backArrowButton(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
+    }
     
     @IBAction func addWords(_ sender: UIButton) {
        addwords(with: adjectiveWords())
@@ -69,6 +72,7 @@ extension AdjectivesViewController {
         }
         return adjectiveWords
     }
+<<<<<<< Updated upstream
 }
 extension AdjectivesViewController: CreateStoryDelegate {
     func addwords(with words: [Word]) {
@@ -77,6 +81,18 @@ extension AdjectivesViewController: CreateStoryDelegate {
         print(wordController.nouns.count)
         print(wordController.verbs.count)
         print(wordController.adjectives.count)
+=======
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationController?.isNavigationBarHidden = true
+        addWordButton.styleSheet()
+        firstAdjective.becomeFirstResponder()
+        firstAdjective.delegate = self
+        secondAdjective.delegate = self
+        thirdAdjective.delegate = self
+        fourthAdjective.delegate = self
+>>>>>>> Stashed changes
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "StoryDetailShowSegue" {
@@ -85,4 +101,27 @@ extension AdjectivesViewController: CreateStoryDelegate {
         }
     }
     
+}
+extension AdjectivesViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == firstAdjective {
+            textField.resignFirstResponder()
+            secondAdjective.becomeFirstResponder()
+            return true
+        } else if textField == secondAdjective {
+            textField.resignFirstResponder()
+            thirdAdjective.becomeFirstResponder()
+            return true
+        } else if textField == thirdAdjective {
+            textField.resignFirstResponder()
+            fourthAdjective.becomeFirstResponder()
+            return true
+        } else if textField == fourthAdjective {
+            textField.resignFirstResponder()
+            return true
+        } else {
+            return false
+        }
+    }
 }

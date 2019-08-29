@@ -68,12 +68,25 @@ extension NounsViewController {
         }
         return nounWords
     }
+<<<<<<< Updated upstream
 }
 
 extension NounsViewController: CreateStoryDelegate {
     func addwords(with words: [Word]) {
         let wordController = WordController()
         wordController.addNouns(words)
+=======
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addWordButton.styleSheet()
+        firstNoun.becomeFirstResponder()
+        firstNoun.delegate = self
+        secondNoun.delegate = self
+        thirdNoun.delegate = self
+        fourthNoun.delegate = self
+        navigationController?.isNavigationBarHidden = true
+>>>>>>> Stashed changes
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "VerbShowSegue" {
@@ -83,4 +96,30 @@ extension NounsViewController: CreateStoryDelegate {
         }
     }
 }
+<<<<<<< Updated upstream
 
+=======
+extension NounsViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField == firstNoun {
+            textField.resignFirstResponder()
+            secondNoun.becomeFirstResponder()
+            return true
+        } else if textField == secondNoun {
+            textField.resignFirstResponder()
+            thirdNoun.becomeFirstResponder()
+            return true
+        } else if textField == thirdNoun {
+            textField.resignFirstResponder()
+            fourthNoun.becomeFirstResponder()
+            return true
+        } else if textField == fourthNoun {
+            textField.resignFirstResponder()
+            return true
+        } else {
+            return false
+        }
+    }
+}
+>>>>>>> Stashed changes
