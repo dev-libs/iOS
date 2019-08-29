@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a7e-lV-nRF">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="6WI-O5-iWJ">
+            <objects>
+                <viewController id="a7e-lV-nRF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2yI-ZZ-H9q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="0E7-Jd-wqh">
+                                <rect key="frame" x="20" y="120" width="280" height="260"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Dev Libs!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.44999998807907104" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Yh-cL-Sto">
+                                        <rect key="frame" x="21" y="0.0" width="238" height="170"/>
+                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="36"/>
+                                        <color key="textColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by Lambda DevLibs Build Week Team " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.44999998807907104" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MbB-cH-ILK">
+                                        <rect key="frame" x="0.0" y="200" width="280" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="92k-Vg-nMg"/>
+                                            <constraint firstAttribute="width" constant="300" id="exX-lF-c9Y"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="18"/>
+                                        <color key="textColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="3Yh-cL-Sto" firstAttribute="centerX" secondItem="0E7-Jd-wqh" secondAttribute="centerX" id="RwE-uc-VlE"/>
+                                    <constraint firstItem="MbB-cH-ILK" firstAttribute="centerX" secondItem="0E7-Jd-wqh" secondAttribute="centerX" id="dK9-Wa-pLl"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="0E7-Jd-wqh" firstAttribute="top" secondItem="X3y-3U-e3Y" secondAttribute="top" constant="100" id="bdy-gc-hL1"/>
+                            <constraint firstItem="X3y-3U-e3Y" firstAttribute="bottom" secondItem="0E7-Jd-wqh" secondAttribute="bottom" constant="100" id="k82-oC-beh"/>
+                            <constraint firstItem="X3y-3U-e3Y" firstAttribute="trailing" secondItem="0E7-Jd-wqh" secondAttribute="trailing" constant="20" id="t3w-0o-Q31"/>
+                            <constraint firstItem="0E7-Jd-wqh" firstAttribute="leading" secondItem="X3y-3U-e3Y" secondAttribute="leading" constant="20" id="u4c-eT-apU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X3y-3U-e3Y"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oED-US-mqF" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="809" y="375"/>
+        </scene>
+    </scenes>
+</document>
