@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WelcomeScreenViewController: UIViewController {
 
     @IBOutlet weak var startButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
       styleSheet()
+        navigationController?.isNavigationBarHidden = true
     }
     
     /// style sheet for button.

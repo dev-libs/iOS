@@ -23,17 +23,18 @@ class StoryViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         updateViews()
     }
+    @IBAction func playAgainButton(_ sender: Any) {
+    navigationController?.popToViewController(NounsViewController(), animated: true)
+        wordController?.removeElements()
+    }
     
     func updateViews() {
         guard let wordController = wordController else { return }
         storyTextView.text = """
-        I would like to recommend my \(wordController.nouns[0].word), for the job of assistant \(wordController.nouns[1].word).
-        He has just graduated and has a degree in \(wordController.verbs[0].word).
-        He has experience teaching \(wordController.nouns[2].word) how to play games.
-        He is \(wordController.adjectives[0].word) and \(wordController.adjectives[1].word).
-        During vacations, he use to \(wordController.verbs[1].word) our \(wordController.adjectives[2].word) dogs.
-        He is smart as a \(wordController.nouns[3].word) and likes to \(wordController.verbs[2].word) for fun.
-        Please \(wordController.verbs[3].word) back quickly, because I think he is the most \(wordController.adjectives[3].word) person there has ever been.
+        Python can be a real \(wordController.adjectives[0].word). In order to \(wordController.verbs[0].word)
+        an app you will need to add 4 sets of color code. Next you will input a \(wordController.nouns[0].word).
+        Finally, be sure to \(wordController.verbs[1].word) the \(wordController.nouns[1].word) before you run the \(wordController.nouns[2].word). What happens after will amaze \(wordController.nouns[3].word)!
+        Just \(wordController.verbs[2].word) the app and see your \(wordController.adjectives[1].word) app.
         """
     }
 }

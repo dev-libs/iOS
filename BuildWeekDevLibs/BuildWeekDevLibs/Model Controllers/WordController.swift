@@ -31,21 +31,9 @@ class WordController {
     func addAdjectives(_ incomingAdjectives: [Word]){
         adjectives.append(contentsOf: incomingAdjectives)
     }
-}
-extension WordController {
-    
-    func createNouns(with words: [Word]) {
-        addNouns(words)
+    func removeElements() {
+        nouns.removeAll()
+        verbs.removeAll()
+        adjectives.removeAll()
     }
-    
-    func createVerbs(with words: [Word]) {
-        addVerbs(words)
-    }
-    
-    func createAdjectives(with words: [Word]) {
-        addAdjectives(words)
-    }
-    
-    
-    
 }
