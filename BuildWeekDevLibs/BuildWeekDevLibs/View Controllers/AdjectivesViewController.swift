@@ -57,18 +57,19 @@ class AdjectivesViewController: UIViewController {
         guard let wordController = wordController else { return }
         wordController.addAdjectives(adjectives)
     }
+    
     @IBAction func backButton(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        buttonStyle()
-        firstAdjective.becomeFirstResponder()
         firstAdjective.delegate = self
         secondAdjective.delegate = self
         thirdAdjective.delegate = self
-        firstAdjective.delegate = self
+        fourthAdjective.delegate = self
+        firstAdjective.becomeFirstResponder()
+        buttonStyle()
         texfieldInset()
     }
     
@@ -80,6 +81,7 @@ class AdjectivesViewController: UIViewController {
         }
     }
 }
+
 extension AdjectivesViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == firstAdjective {
@@ -101,10 +103,40 @@ extension AdjectivesViewController: UITextFieldDelegate {
             return false 
         }
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == thirdAdjective {
+            moveTextField(textfield: textField, moveDistance: -80, up: true)
+        } else if textField == fourthAdjective {
+            moveTextField(textfield: textField, moveDistance: -180, up: true)
+        } else {
+            moveTextField(textfield: textField, moveDistance: 0, up: false)
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == thirdAdjective {
+            moveTextField(textfield: textField, moveDistance: 80, up: true)
+        } else if textField == fourthAdjective {
+            moveTextField(textfield: textField, moveDistance: 180, up: true)
+        } else {
+            moveTextField(textfield: textField, moveDistance: 0, up: false)
+        }
+    }
+    
+    func moveTextField(textfield: UITextField, moveDistance: Int, up: Bool) {
+        let moveDuration = 0.3
+        let movement: CGFloat = CGFloat(up ? moveDistance: -moveDistance)
+        UIView.beginAnimations("animateTextField", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(moveDuration)
+        self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+        UIView.commitAnimations()
+    }
 }
 
 extension AdjectivesViewController {
-    
+    // button styling
     func buttonStyle() {
         addWordButton.layer.cornerRadius = 15
         addWordButton.layer.shadowColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
@@ -113,6 +145,7 @@ extension AdjectivesViewController {
         addWordButton.layer.shadowOpacity = 6
         addWordButton.layer.shadowRadius = 8
     }
+    
     func texfieldInset() {
         firstAdjective.setLeftPaddingPoints(10)
         secondAdjective.setLeftPaddingPoints(10)
