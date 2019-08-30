@@ -97,17 +97,49 @@ extension NounsViewController: UITextFieldDelegate {
             return false
         }
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == thirdNoun {
+            moveTextField(textfield: textField, moveDistance: -80, up: true)
+        } else if textField == fourthNoun {
+            moveTextField(textfield: textField, moveDistance: -180, up: true)
+        } else {
+            moveTextField(textfield: textField, moveDistance: 0, up: false)
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == thirdNoun {
+            moveTextField(textfield: textField, moveDistance: 80, up: true)
+        } else if textField == fourthNoun {
+            moveTextField(textfield: textField, moveDistance: 180, up: true)
+        } else {
+            moveTextField(textfield: textField, moveDistance: 0, up: false)
+        }
+    }
+    
+    func moveTextField(textfield: UITextField, moveDistance: Int, up: Bool) {
+        let moveDuration = 0.3
+        let movement: CGFloat = CGFloat(up ? moveDistance: -moveDistance)
+        UIView.beginAnimations("animateTextField", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(moveDuration)
+        self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+        UIView.commitAnimations()
+    }
 }
+
 extension NounsViewController {
     // styling for the button
     func buttonStyle() {
-               addWordButton.layer.cornerRadius = 15
-                addWordButton.layer.shadowColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-                addWordButton.layer.shadowOffset = CGSize(width: addWordButton.layer.borderWidth, height: 9)
-                addWordButton.layer.masksToBounds = false
-                addWordButton.layer.shadowOpacity = 6
-                addWordButton.layer.shadowRadius = 8
+       addWordButton.layer.cornerRadius = 15
+        addWordButton.layer.shadowColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        addWordButton.layer.shadowOffset = CGSize(width: addWordButton.layer.borderWidth, height: 9)
+        addWordButton.layer.masksToBounds = false
+        addWordButton.layer.shadowOpacity = 6
+        addWordButton.layer.shadowRadius = 8
     }
+    
     @IBAction func unwindToNoun(_ unwindSegue: UIStoryboardSegue) {
         firstNoun.text = ""
         secondNoun.text = ""
