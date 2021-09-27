@@ -14,22 +14,21 @@ class WelcomeScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      styleSheet()
-        navigationController?.isNavigationBarHidden = true
+        configureUI()
     }
     
     /// style sheet for button.
-    func styleSheet() {
-        
+    func configureUI() {
         startButton.layer.cornerRadius = 15
-        startButton.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        startButton.layer.shadowOffset = CGSize(width: startButton.layer.borderWidth, height: 9)
+        startButton.layer.shadowOffset = CGSize(width: startButton.layer.borderWidth, height: 20)
         startButton.layer.masksToBounds = false
-        startButton.layer.shadowOpacity = 6
-       
+        
+        // navigation setup
+        navigationController?.isNavigationBarHidden = true
     }
     
 
+    
 }
 
 
