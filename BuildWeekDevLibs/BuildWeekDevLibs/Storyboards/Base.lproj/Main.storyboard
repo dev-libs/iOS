@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19158" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3WX-VE-NrB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3WX-VE-NrB">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19141"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -80,7 +81,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hgh-Mg-wut">
-                                <rect key="frame" x="10" y="188" width="370" height="450"/>
+                                <rect key="frame" x="10" y="187.99999999999997" width="370" height="338.33333333333326"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Choose your nouns." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.44999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="GN9-3p-ktt">
                                         <rect key="frame" x="10" y="0.0" width="350" height="25"/>
@@ -88,12 +89,12 @@
                                             <constraint firstAttribute="height" constant="25" id="DNp-ks-fMY"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="24"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Noun #1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="axi-N1-oKm">
                                         <rect key="frame" x="10" y="60" width="350" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="FQz-tl-wjb"/>
                                             <constraint firstAttribute="height" constant="50" id="bom-89-tcm"/>
@@ -103,7 +104,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Noun #2" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQR-jh-4j7">
                                         <rect key="frame" x="10" y="145" width="350" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="PJt-eF-ebY"/>
                                         </constraints>
@@ -112,7 +113,7 @@
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Noun #3" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c7b-sY-RnW">
                                         <rect key="frame" x="10" y="230" width="350" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Idf-8I-ouF"/>
                                         </constraints>
@@ -120,30 +121,14 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Noun #4" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2kI-Aq-WOF">
-                                        <rect key="frame" x="10" y="315" width="350" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="10" y="315" width="350" height="23.333333333333314"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Met-EZ-84r"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="18"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ul-5j-BW4">
-                                        <rect key="frame" x="119.66666666666666" y="400" width="131" height="50"/>
-                                        <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="xuW-7k-qPd"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                        <inset key="contentEdgeInsets" minX="20" minY="5" maxX="20" maxY="5"/>
-                                        <state key="normal" title="Verbs Next">
-                                            <color key="titleColor" red="0.22745098039215686" green="0.22745098039215686" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="addWords:" destination="Q14-sQ-fa9" eventType="touchUpInside" id="ZSu-JJ-i72"/>
-                                            <segue destination="NJJ-hC-ecB" kind="show" identifier="ShowVerbsSegue" id="ga8-SB-Tyv"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="GN9-3p-ktt" firstAttribute="top" secondItem="hgh-Mg-wut" secondAttribute="top" id="3iz-ym-1wz"/>
@@ -153,14 +138,35 @@
                                     <constraint firstItem="GN9-3p-ktt" firstAttribute="leading" secondItem="hgh-Mg-wut" secondAttribute="leading" constant="10" id="BdL-gr-Tyv"/>
                                     <constraint firstItem="bQR-jh-4j7" firstAttribute="leading" secondItem="axi-N1-oKm" secondAttribute="leading" id="TLa-ru-yOu"/>
                                     <constraint firstItem="axi-N1-oKm" firstAttribute="leading" secondItem="hgh-Mg-wut" secondAttribute="leading" constant="10" id="XKJ-Ky-33o"/>
-                                    <constraint firstItem="9ul-5j-BW4" firstAttribute="top" secondItem="2kI-Aq-WOF" secondAttribute="bottom" constant="35" id="xht-SI-sv9"/>
                                     <constraint firstItem="c7b-sY-RnW" firstAttribute="leading" secondItem="bQR-jh-4j7" secondAttribute="leading" id="ybj-9f-nMW"/>
                                     <constraint firstItem="axi-N1-oKm" firstAttribute="top" secondItem="GN9-3p-ktt" secondAttribute="bottom" constant="35" id="ywj-f8-pOq"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JDv-gK-z0a">
+                                <rect key="frame" x="144" y="706" width="139" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ul-5j-BW4">
+                                        <rect key="frame" x="4" y="8" width="131" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="5" maxX="20" maxY="5"/>
+                                        <state key="normal" title="Verbs Next">
+                                            <color key="titleColor" red="0.22745098039215686" green="0.22745098039215686" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" systemColor="linkColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addWords:" destination="Q14-sQ-fa9" eventType="touchUpInside" id="ZSu-JJ-i72"/>
+                                            <segue destination="NJJ-hC-ecB" kind="show" identifier="ShowVerbsSegue" id="ga8-SB-Tyv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.64313725490196072" green="0.53333333333333333" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="moT-YO-uKS"/>
-                        <color key="backgroundColor" red="0.54117647058823526" green="0.74117647058823533" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96862745098039216" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="moT-YO-uKS" firstAttribute="bottom" secondItem="hgh-Mg-wut" secondAttribute="bottom" constant="172" id="4L0-tf-56z"/>
                             <constraint firstItem="moT-YO-uKS" firstAttribute="trailing" secondItem="hgh-Mg-wut" secondAttribute="trailing" constant="10" id="ND4-7H-SSV"/>
@@ -480,9 +486,29 @@
             </objects>
             <point key="canvasLocation" x="4775" y="137"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="hix-kw-Rcc">
+            <objects>
+                <viewController id="NpS-7a-t1g" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y5Y-5y-IIm">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vpf-sW-7NZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1620" y="-287"/>
+        </scene>
     </scenes>
     <resources>
         <image name="blackBackArrow2" width="62" height="57"/>
         <image name="name TextField" width="218" height="53"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

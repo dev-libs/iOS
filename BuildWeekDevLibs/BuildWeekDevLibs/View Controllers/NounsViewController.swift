@@ -9,13 +9,13 @@
 import UIKit
 
 class NounsViewController: UIViewController {
-
+    
     //MARK: - properties
     
     var wordController = WordController()
     
     //MARK: - outlets
-
+    
     @IBOutlet weak var firstNoun: UITextField!
     @IBOutlet weak var secondNoun: UITextField!
     @IBOutlet weak var thirdNoun: UITextField!
@@ -60,13 +60,13 @@ class NounsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        firstNoun.becomeFirstResponder()
         buttonStyle()
         firstNoun.delegate = self
         secondNoun.delegate = self
         thirdNoun.delegate = self
         fourthNoun.delegate = self
         texfieldInset()
+        styleTextfields()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -76,6 +76,7 @@ class NounsViewController: UIViewController {
         }
     }
 }
+
 extension NounsViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == firstNoun {
@@ -132,12 +133,11 @@ extension NounsViewController: UITextFieldDelegate {
 extension NounsViewController {
     // styling for the button
     func buttonStyle() {
-       addWordButton.layer.cornerRadius = 15
-        addWordButton.layer.shadowColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        addWordButton.layer.cornerRadius = 25
         addWordButton.layer.shadowOffset = CGSize(width: addWordButton.layer.borderWidth, height: 9)
         addWordButton.layer.masksToBounds = false
-        addWordButton.layer.shadowOpacity = 6
-        addWordButton.layer.shadowRadius = 8
+       addWordButton.layer.shadowOpacity = 6
+       addWordButton.layer.shadowRadius = 8
     }
     
     @IBAction func unwindToNoun(_ unwindSegue: UIStoryboardSegue) {
@@ -153,5 +153,45 @@ extension NounsViewController {
         secondNoun.setLeftPaddingPoints(10)
         thirdNoun.setLeftPaddingPoints(10)
         fourthNoun.setLeftPaddingPoints(10)
+    }
+    
+    func styleTextfields() {
+        
+        // remove masksToBounds
+        firstNoun.layer.masksToBounds = false
+        secondNoun.layer.masksToBounds = false
+        thirdNoun.layer.masksToBounds = false
+        fourthNoun.layer.masksToBounds = false
+        
+        // setup corner radius
+        firstNoun.layer.cornerRadius = 10
+        secondNoun.layer.cornerRadius = 10
+        thirdNoun.layer.cornerRadius = 10
+        fourthNoun.layer.cornerRadius = 10
+        
+        // setup shadow radius
+        firstNoun.layer.shadowColor = CGColor(red: 135.0, green: 135.0, blue: 135.0, alpha: 1)
+        secondNoun.layer.shadowColor = CGColor(red: 247.0, green: 247.0, blue: 247.0, alpha: 1)
+        thirdNoun.layer.shadowColor = CGColor(red: 247.0, green: 247.0, blue: 247.0, alpha: 1)
+        fourthNoun.layer.shadowColor = CGColor(red: 247.0, green: 247.0, blue: 247.0, alpha: 1)
+        
+        // add shadow color
+        firstNoun.layer.shadowRadius = 10
+        secondNoun.layer.shadowRadius = 10
+        thirdNoun.layer.shadowRadius = 10
+        fourthNoun.layer.shadowRadius = 10
+        
+        //
+        firstNoun.layer.shadowOffset = CGSize(width:  firstNoun.layer.borderWidth, height:   10)
+        secondNoun.layer.shadowOffset = CGSize(width: secondNoun.layer.borderWidth, height:  9)
+        thirdNoun.layer.shadowOffset = CGSize(width:  thirdNoun.layer.borderWidth, height:   9)
+        fourthNoun.layer.shadowOffset = CGSize(width: fourthNoun.layer.borderWidth, height:  9)
+        
+        //
+        firstNoun.layer.shadowOpacity = 5
+        secondNoun.layer.shadowOpacity = 5
+        thirdNoun.layer.shadowOpacity = 5
+        fourthNoun.layer.shadowOpacity = 5
+        
     }
 }
