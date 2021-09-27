@@ -19,7 +19,7 @@ class WelcomeScreenViewController: UIViewController {
     
     /// style sheet for button.
     func configureUI() {
-        startButton.layer.cornerRadius = 15
+        startButton.layer.cornerRadius = 25
         startButton.layer.shadowOffset = CGSize(width: startButton.layer.borderWidth, height: 20)
         startButton.layer.masksToBounds = false
         
