@@ -21,6 +21,7 @@ class NounsViewController: UIViewController {
     @IBOutlet weak var thirdNoun: UITextField!
     @IBOutlet weak var fourthNoun: UITextField!
     @IBOutlet weak var addWordButton: UIButton!
+    @IBOutlet weak var borderVIew: UIView!
     
     // MARK: - actions
     
@@ -136,8 +137,8 @@ extension NounsViewController {
         addWordButton.layer.cornerRadius = 25
         addWordButton.layer.shadowOffset = CGSize(width: addWordButton.layer.borderWidth, height: 9)
         addWordButton.layer.masksToBounds = false
-       addWordButton.layer.shadowOpacity = 6
-       addWordButton.layer.shadowRadius = 8
+//       addWordButton.layer.shadowOpacity = 6
+//       addWordButton.layer.shadowRadius = 8
     }
     
     @IBAction func unwindToNoun(_ unwindSegue: UIStoryboardSegue) {
@@ -157,12 +158,6 @@ extension NounsViewController {
     
     func styleTextfields() {
         
-        // remove masksToBounds
-        firstNoun.layer.masksToBounds = false
-        secondNoun.layer.masksToBounds = false
-        thirdNoun.layer.masksToBounds = false
-        fourthNoun.layer.masksToBounds = false
-        
         // setup corner radius
         firstNoun.layer.cornerRadius = 10
         secondNoun.layer.cornerRadius = 10
@@ -170,10 +165,17 @@ extension NounsViewController {
         fourthNoun.layer.cornerRadius = 10
         
         // setup shadow radius
-        firstNoun.layer.shadowColor = CGColor(red: 135.0, green: 135.0, blue: 135.0, alpha: 1)
+        //UIColor(red: 13, green: 13, blue: 13, alpha: 1).cgColor
+        firstNoun.layer.shadowColor = CGColor(red: 247.0, green: 247.0, blue: 247.0, alpha: 1)
         secondNoun.layer.shadowColor = CGColor(red: 247.0, green: 247.0, blue: 247.0, alpha: 1)
         thirdNoun.layer.shadowColor = CGColor(red: 247.0, green: 247.0, blue: 247.0, alpha: 1)
         fourthNoun.layer.shadowColor = CGColor(red: 247.0, green: 247.0, blue: 247.0, alpha: 1)
+        
+        //
+       // firstNoun.layer.shadowOffset = CGSize.zero
+        secondNoun.layer.shadowOffset = CGSize.zero
+        thirdNoun.layer.shadowOffset = CGSize.zero
+        fourthNoun.layer.shadowOffset = CGSize.zero
         
         // add shadow color
         firstNoun.layer.shadowRadius = 10
@@ -182,16 +184,22 @@ extension NounsViewController {
         fourthNoun.layer.shadowRadius = 10
         
         //
-        firstNoun.layer.shadowOffset = CGSize(width:  firstNoun.layer.borderWidth, height:   10)
-        secondNoun.layer.shadowOffset = CGSize(width: secondNoun.layer.borderWidth, height:  9)
-        thirdNoun.layer.shadowOffset = CGSize(width:  thirdNoun.layer.borderWidth, height:   9)
-        fourthNoun.layer.shadowOffset = CGSize(width: fourthNoun.layer.borderWidth, height:  9)
-        
-        //
-        firstNoun.layer.shadowOpacity = 5
+        firstNoun.layer.shadowOpacity = 10
         secondNoun.layer.shadowOpacity = 5
         thirdNoun.layer.shadowOpacity = 5
         fourthNoun.layer.shadowOpacity = 5
         
+        firstNoun.borderStyle = .none
+        secondNoun.borderStyle = .none
+        thirdNoun.borderStyle = .none
+        fourthNoun.borderStyle = .none
+        
+        // remove masksToBounds
+        firstNoun.layer.masksToBounds = false
+        secondNoun.layer.masksToBounds = false
+        thirdNoun.layer.masksToBounds = false
+        fourthNoun.layer.masksToBounds = false
+        
+        borderVIew.layer.cornerRadius = 25
     }
 }
