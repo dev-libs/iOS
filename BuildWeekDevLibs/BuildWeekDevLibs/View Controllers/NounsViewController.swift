@@ -16,10 +16,10 @@ class NounsViewController: UIViewController {
     
     //MARK: - outlets
     
-    @IBOutlet weak var firstNoun: UITextField!
-    @IBOutlet weak var secondNoun: UITextField!
-    @IBOutlet weak var thirdNoun: UITextField!
-    @IBOutlet weak var fourthNoun: UITextField!
+    @IBOutlet weak var firstNounTextfield: UITextField!
+    @IBOutlet weak var secondNounTextfield: UITextField!
+    @IBOutlet weak var thirdNounTextfield: UITextField!
+    @IBOutlet weak var fourthNounTextfield: UITextField!
     @IBOutlet weak var addWordButton: UIButton!
     @IBOutlet weak var borderVIew: UIView!
     
@@ -28,32 +28,32 @@ class NounsViewController: UIViewController {
     @IBAction func addWords(_ sender: UIButton) {
         var nouns: [Word] = []
         
-        if let firstNoun = firstNoun.text,!firstNoun.isEmpty {
+        if let firstNoun = firstNounTextfield.text,!firstNoun.isEmpty {
             let noun = Word(word: firstNoun)
             nouns.append(noun)
-        } else if firstNoun.text == "" {
-            let emptyString = Word(word: firstNoun.text!)
+        } else if firstNounTextfield.text == "" {
+            let emptyString = Word(word: firstNounTextfield.text!)
             nouns.append(emptyString)
         }
-        if let secondNoun = secondNoun.text, !secondNoun.isEmpty {
+        if let secondNoun = secondNounTextfield.text, !secondNoun.isEmpty {
             let noun = Word(word: secondNoun)
             nouns.append(noun)
-        } else if secondNoun.text == "" {
-            let emptyString = Word(word: secondNoun.text!)
+        } else if secondNounTextfield.text == "" {
+            let emptyString = Word(word: secondNounTextfield.text!)
             nouns.append(emptyString)
         }
-        if let thirdNoun = thirdNoun.text,!thirdNoun.isEmpty {
+        if let thirdNoun = thirdNounTextfield.text,!thirdNoun.isEmpty {
             let noun = Word(word: thirdNoun)
             nouns.append(noun)
-        } else if thirdNoun.text == "" {
-            let emptyString = Word(word: thirdNoun.text!)
+        } else if thirdNounTextfield.text == "" {
+            let emptyString = Word(word: thirdNounTextfield.text!)
             nouns.append(emptyString)
         }
-        if let fourthNoun = fourthNoun.text, !fourthNoun.isEmpty {
+        if let fourthNoun = fourthNounTextfield.text, !fourthNoun.isEmpty {
             let noun = Word(word: fourthNoun)
             nouns.append(noun)
-        } else if fourthNoun.text == "" {
-            let emptyString = Word(word: fourthNoun.text!)
+        } else if fourthNounTextfield.text == "" {
+            let emptyString = Word(word: fourthNounTextfield.text!)
             nouns.append(emptyString)
         }
         wordController.addNouns(nouns)
@@ -62,10 +62,10 @@ class NounsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         buttonStyle()
-        firstNoun.delegate = self
-        secondNoun.delegate = self
-        thirdNoun.delegate = self
-        fourthNoun.delegate = self
+        firstNounTextfield.delegate = self
+        secondNounTextfield.delegate = self
+        thirdNounTextfield.delegate = self
+        fourthNounTextfield.delegate = self
         texfieldInset()
         styleTextfields()
     }
@@ -80,19 +80,19 @@ class NounsViewController: UIViewController {
 
 extension NounsViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == firstNoun {
+        if textField == firstNounTextfield {
             textField.resignFirstResponder()
-            secondNoun.becomeFirstResponder()
+            secondNounTextfield.becomeFirstResponder()
             return true
-        } else if textField == secondNoun {
+        } else if textField == secondNounTextfield {
             textField.resignFirstResponder()
-            thirdNoun.becomeFirstResponder()
+            thirdNounTextfield.becomeFirstResponder()
             return true
-        } else if textField == thirdNoun {
+        } else if textField == thirdNounTextfield {
             textField.resignFirstResponder()
-            fourthNoun.becomeFirstResponder()
+            fourthNounTextfield.becomeFirstResponder()
             return true
-        } else if textField == fourthNoun {
+        } else if textField == fourthNounTextfield {
             textField.resignFirstResponder()
             return true
         } else {
@@ -101,9 +101,9 @@ extension NounsViewController: UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == thirdNoun {
+        if textField == thirdNounTextfield {
             moveTextField(textfield: textField, moveDistance: -80, up: true)
-        } else if textField == fourthNoun {
+        } else if textField == fourthNounTextfield {
             moveTextField(textfield: textField, moveDistance: -180, up: true)
         } else {
             moveTextField(textfield: textField, moveDistance: 0, up: false)
@@ -111,9 +111,9 @@ extension NounsViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField == thirdNoun {
+        if textField == thirdNounTextfield {
             moveTextField(textfield: textField, moveDistance: 80, up: true)
-        } else if textField == fourthNoun {
+        } else if textField == fourthNounTextfield {
             moveTextField(textfield: textField, moveDistance: 180, up: true)
         } else {
             moveTextField(textfield: textField, moveDistance: 0, up: false)
@@ -142,64 +142,27 @@ extension NounsViewController {
     }
     
     @IBAction func unwindToNoun(_ unwindSegue: UIStoryboardSegue) {
-        firstNoun.text = ""
-        secondNoun.text = ""
-        thirdNoun.text = ""
-        fourthNoun.text = ""
-        firstNoun.becomeFirstResponder()
+        firstNounTextfield.text = ""
+        secondNounTextfield.text = ""
+        thirdNounTextfield.text = ""
+        fourthNounTextfield.text = ""
+        firstNounTextfield.becomeFirstResponder()
     }
     
     func texfieldInset() {
-        firstNoun.setLeftPaddingPoints(10)
-        secondNoun.setLeftPaddingPoints(10)
-        thirdNoun.setLeftPaddingPoints(10)
-        fourthNoun.setLeftPaddingPoints(10)
+        firstNounTextfield.setLeftPaddingPoints(10)
+        secondNounTextfield.setLeftPaddingPoints(10)
+        thirdNounTextfield.setLeftPaddingPoints(10)
+        fourthNounTextfield.setLeftPaddingPoints(10)
     }
     
     func styleTextfields() {
         
-        // setup corner radius
-        firstNoun.layer.cornerRadius = 10
-        secondNoun.layer.cornerRadius = 10
-        thirdNoun.layer.cornerRadius = 10
-        fourthNoun.layer.cornerRadius = 10
-        
-        // setup shadow radius
-        //UIColor(red: 13, green: 13, blue: 13, alpha: 1).cgColor
-        firstNoun.layer.shadowColor = CGColor(red: 247.0, green: 247.0, blue: 247.0, alpha: 1)
-        secondNoun.layer.shadowColor = CGColor(red: 247.0, green: 247.0, blue: 247.0, alpha: 1)
-        thirdNoun.layer.shadowColor = CGColor(red: 247.0, green: 247.0, blue: 247.0, alpha: 1)
-        fourthNoun.layer.shadowColor = CGColor(red: 247.0, green: 247.0, blue: 247.0, alpha: 1)
-        
-        //
-       // firstNoun.layer.shadowOffset = CGSize.zero
-        secondNoun.layer.shadowOffset = CGSize.zero
-        thirdNoun.layer.shadowOffset = CGSize.zero
-        fourthNoun.layer.shadowOffset = CGSize.zero
-        
-        // add shadow color
-        firstNoun.layer.shadowRadius = 10
-        secondNoun.layer.shadowRadius = 10
-        thirdNoun.layer.shadowRadius = 10
-        fourthNoun.layer.shadowRadius = 10
-        
-        //
-        firstNoun.layer.shadowOpacity = 10
-        secondNoun.layer.shadowOpacity = 5
-        thirdNoun.layer.shadowOpacity = 5
-        fourthNoun.layer.shadowOpacity = 5
-        
-        firstNoun.borderStyle = .none
-        secondNoun.borderStyle = .none
-        thirdNoun.borderStyle = .none
-        fourthNoun.borderStyle = .none
-        
-        // remove masksToBounds
-        firstNoun.layer.masksToBounds = false
-        secondNoun.layer.masksToBounds = false
-        thirdNoun.layer.masksToBounds = false
-        fourthNoun.layer.masksToBounds = false
-        
+        firstNounTextfield.styleTextfield()
+        secondNounTextfield.styleTextfield()
+        thirdNounTextfield.styleTextfield()
+        fourthNounTextfield.styleTextfield()
+    
         borderVIew.layer.cornerRadius = 25
     }
 }

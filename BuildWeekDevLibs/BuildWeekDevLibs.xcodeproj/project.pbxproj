@@ -19,6 +19,7 @@
 		A25993BE23143E0600FE8BD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A25993BD23143E0600FE8BD2 /* Assets.xcassets */; };
 		A25993C123143E0600FE8BD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25993BF23143E0600FE8BD2 /* LaunchScreen.storyboard */; };
 		DD6BD5432318402400F1671C /* TextFieldInset.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6BD5422318402400F1671C /* TextFieldInset.swift */; };
+		DDC01C832705366A0094A555 /* TextfieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC01C822705366A0094A555 /* TextfieldExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		A25993C023143E0600FE8BD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A25993C223143E0600FE8BD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD6BD5422318402400F1671C /* TextFieldInset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldInset.swift; sourceTree = "<group>"; };
+		DDC01C822705366A0094A555 /* TextfieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		A25993B523143E0500FE8BD2 /* BuildWeekDevLibs */ = {
 			isa = PBXGroup;
 			children = (
+				DDC01C822705366A0094A555 /* TextfieldExtension.swift */,
 				77DFEAD923144ADE004C1BD7 /* Storyboards */,
 				77DFEAD823144AD3004C1BD7 /* View Controllers */,
 				777B377B2315938F0056FEAB /* Model Controllers */,
@@ -205,6 +208,7 @@
 				DD6BD5432318402400F1671C /* TextFieldInset.swift in Sources */,
 				777B37762315921A0056FEAB /* StoryViewController.swift in Sources */,
 				777B37742315921A0056FEAB /* AdjectivesViewController.swift in Sources */,
+				DDC01C832705366A0094A555 /* TextfieldExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

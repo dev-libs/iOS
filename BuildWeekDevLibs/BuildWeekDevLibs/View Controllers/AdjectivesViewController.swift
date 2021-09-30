@@ -152,4 +152,15 @@ extension AdjectivesViewController {
         thirdAdjective.setLeftPaddingPoints(10)
         fourthAdjective.setLeftPaddingPoints(10)
     }
+    
+    func styleTextfields() {
+        
+        // setup corner radius
+        firstAdjective.styleTextfield()
+        secondAdjective.styleTextfield()
+        thirdAdjective.styleTextfield()
+        fourthAdjective.styleTextfield()
+        
+       // borderLayer.layer.cornerRadius = 25
+    }
 }

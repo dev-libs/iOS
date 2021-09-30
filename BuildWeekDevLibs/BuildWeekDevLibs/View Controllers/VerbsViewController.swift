@@ -16,42 +16,44 @@ class VerbsViewController: UIViewController {
     
     //MARK: - outlets
 
-    @IBOutlet weak var firstVerb: UITextField!
-    @IBOutlet weak var secondVerb: UITextField!
-    @IBOutlet weak var thirdVerb: UITextField!
-    @IBOutlet weak var fourthVerb: UITextField!
+    @IBOutlet weak var firstVerbTextfield: UITextField!
+    @IBOutlet weak var secondVerbTextfield: UITextField!
+    @IBOutlet weak var thirdVerbTextfield: UITextField!
+    @IBOutlet weak var fourthVerbTextfield: UITextField!
     @IBOutlet weak var addWordButton: UIButton!
+    @IBOutlet weak var borderLayer: UIView!
+    
     
     //MARK: - actions
     
     @IBAction func addWords(_ sender: UIButton) {
         var verbs: [Word] = []
-        if let firstVerb = firstVerb.text,!firstVerb.isEmpty {
+        if let firstVerb = firstVerbTextfield.text,!firstVerb.isEmpty {
             let verbWord = Word(word: firstVerb)
             verbs.append(verbWord)
-        } else if firstVerb.text == "" {
-            let emptyString = Word(word: firstVerb.text!)
+        } else if firstVerbTextfield.text == "" {
+            let emptyString = Word(word: firstVerbTextfield.text!)
             verbs.append(emptyString)
         }
-        if let secondVerb = secondVerb.text, !secondVerb.isEmpty {
+        if let secondVerb = secondVerbTextfield.text, !secondVerb.isEmpty {
             let verbWord = Word(word: secondVerb)
             verbs.append(verbWord)
-        } else if secondVerb.text == "" {
-            let emptyString = Word(word: secondVerb.text!)
+        } else if secondVerbTextfield.text == "" {
+            let emptyString = Word(word: secondVerbTextfield.text!)
             verbs.append(emptyString)
         }
-        if let thirdVerb = thirdVerb.text,!thirdVerb.isEmpty {
+        if let thirdVerb = thirdVerbTextfield.text,!thirdVerb.isEmpty {
             let verbWord = Word(word: thirdVerb)
             verbs.append(verbWord)
-        } else if thirdVerb.text == "" {
-            let emptyString = Word(word: thirdVerb.text!)
+        } else if thirdVerbTextfield.text == "" {
+            let emptyString = Word(word: thirdVerbTextfield.text!)
             verbs.append(emptyString)
         }
-        if let fourthVerb = fourthVerb.text,!fourthVerb.isEmpty {
+        if let fourthVerb = fourthVerbTextfield.text,!fourthVerb.isEmpty {
             let verbWord = Word(word: fourthVerb)
             verbs.append(verbWord)
-        } else if fourthVerb.text == "" {
-            let emptyString = Word(word: fourthVerb.text!)
+        } else if fourthVerbTextfield.text == "" {
+            let emptyString = Word(word: fourthVerbTextfield.text!)
             verbs.append(emptyString)
         }
         guard let wordController = wordController else { return }
@@ -64,13 +66,13 @@ class VerbsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        firstVerb.delegate = self
-        secondVerb.delegate = self
-        thirdVerb.delegate = self
-        fourthVerb.delegate = self
-        firstVerb.becomeFirstResponder()
+        firstVerbTextfield.delegate = self
+        secondVerbTextfield.delegate = self
+        thirdVerbTextfield.delegate = self
+        fourthVerbTextfield.delegate = self
         buttonStyle()
         texfieldInset()
+        styleTextfields()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -84,19 +86,19 @@ class VerbsViewController: UIViewController {
 
 extension VerbsViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == firstVerb {
+        if textField == firstVerbTextfield {
             textField.resignFirstResponder()
-            secondVerb.becomeFirstResponder()
+            secondVerbTextfield.becomeFirstResponder()
             return true
-        } else if textField == secondVerb {
+        } else if textField == secondVerbTextfield {
             textField.resignFirstResponder()
-            thirdVerb.becomeFirstResponder()
+            thirdVerbTextfield.becomeFirstResponder()
             return true
-        } else if textField == thirdVerb {
+        } else if textField == thirdVerbTextfield {
             textField.resignFirstResponder()
-            fourthVerb.becomeFirstResponder()
+            fourthVerbTextfield.becomeFirstResponder()
             return true
-        } else if textField == fourthVerb {
+        } else if textField == fourthVerbTextfield {
             textField.resignFirstResponder()
             return true
         } else {
@@ -105,9 +107,9 @@ extension VerbsViewController: UITextFieldDelegate {
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == thirdVerb {
+        if textField == thirdVerbTextfield {
             moveTextField(textfield: textField, moveDistance: -80, up: true)
-        } else if textField == fourthVerb {
+        } else if textField == fourthVerbTextfield {
             moveTextField(textfield: textField, moveDistance: -180, up: true)
         } else {
             moveTextField(textfield: textField, moveDistance: 0, up: false)
@@ -115,9 +117,9 @@ extension VerbsViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if textField == thirdVerb {
+        if textField == thirdVerbTextfield {
             moveTextField(textfield: textField, moveDistance: 80, up: true)
-        } else if textField == fourthVerb {
+        } else if textField == fourthVerbTextfield {
             moveTextField(textfield: textField, moveDistance: 180, up: true)
         } else {
             moveTextField(textfield: textField, moveDistance: 0, up: false)
@@ -138,18 +140,29 @@ extension VerbsViewController: UITextFieldDelegate {
 extension VerbsViewController {
     // button styling
     func buttonStyle() {
-        addWordButton.layer.cornerRadius = 15
+        addWordButton.layer.cornerRadius = 25
         addWordButton.layer.shadowColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         addWordButton.layer.shadowOffset = CGSize(width: addWordButton.layer.borderWidth, height: 9)
         addWordButton.layer.masksToBounds = false
-        addWordButton.layer.shadowOpacity = 6
-        addWordButton.layer.shadowRadius = 8
+        addWordButton.layer.borderColor = #colorLiteral(red: 0.6646977663, green: 0.5280762911, blue: 1, alpha: 1)
+
     }
     
     func texfieldInset() {
-        firstVerb.setLeftPaddingPoints(10)
-        secondVerb.setLeftPaddingPoints(10)
-        thirdVerb.setLeftPaddingPoints(10)
-        fourthVerb.setLeftPaddingPoints(10)
+        firstVerbTextfield.setLeftPaddingPoints(10)
+        secondVerbTextfield.setLeftPaddingPoints(10)
+        thirdVerbTextfield.setLeftPaddingPoints(10)
+        fourthVerbTextfield.setLeftPaddingPoints(10)
+    }
+    
+    func styleTextfields() {
+        
+        // setup corner radius
+        firstVerbTextfield.styleTextfield()
+        secondVerbTextfield.styleTextfield()
+        thirdVerbTextfield.styleTextfield()
+        fourthVerbTextfield.styleTextfield()
+        
+        borderLayer.layer.cornerRadius = 25
     }
 }
